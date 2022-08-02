@@ -78,7 +78,7 @@ fun DefaultPreview(
         }
         val coroutineScope = rememberCoroutineScope()
 
-        viewModel.statusApi.observeForever() {
+        viewModel.statusApi.observeForever{
             isLoadingAnimOcto = false
             isLoading = false
         }
