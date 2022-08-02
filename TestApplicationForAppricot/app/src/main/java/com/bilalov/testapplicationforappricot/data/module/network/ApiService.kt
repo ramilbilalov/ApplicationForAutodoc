@@ -11,11 +11,11 @@ import retrofit2.http.Query
 interface ApiService {
 
     @GET("search/repositories?")
-    @Headers("Accept: application/vnd.github+json", "Authorization: token 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")
+    @Headers("Accept: application/vnd.github+json", "Authorization: token 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")
      fun getQuestList(@Query("q") textInputSearch:String ): Call<ResponseSearchRepos>
 
     @GET("users/{login}")
-    @Headers("Accept: application/vnd.github+json", "Authorization: token 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")
+    @Headers("Accept: application/vnd.github+json", "Authorization: token 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")
     fun getQuestListProfile(@Path("login") login:String ): Call<ResponseUserProfile>
 
 }
