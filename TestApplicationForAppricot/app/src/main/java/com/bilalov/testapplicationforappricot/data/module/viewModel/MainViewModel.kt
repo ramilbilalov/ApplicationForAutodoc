@@ -49,13 +49,13 @@ class MainViewModel @Inject constructor() :ViewModel() {
 
 
     fun getRepository(textInputSearch: String, application: Application) {
-        viewModelScope.launch {
+        viewModelScope.launch(Dispatchers.IO) {
             send(textInputSearch, application)
         }
     }
 
     fun getUserInfo(login: String, application: Application) {
-        viewModelScope.launch {
+        viewModelScope.launch(Dispatchers.IO) {
             sendProfile(login, application)
         }
     }
